@@ -1,0 +1,54 @@
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "prashanth",
+  "password": "luffytaro_pk",
+  "name": "Prashanth",
+  "gender": "male"
+}
+###
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username":"prashanth",
+  "password":"luffytaro_pk"
+}
+###
+
+POST http://localhost:3000/inventory/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXNoYW50aCIsImlhdCI6MTY2OTI4NTUyOX0.sja56rIB6ldMXojnrpD7JVlVHoYCrLvnBU4AEWzbmjQ
+Content-Type: application/json
+
+{
+   "name":"laptop",
+   "stock": 15,
+   "price": 40000
+}
+###
+
+GET http://localhost:3000/inventory/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXNoYW50aCIsImlhdCI6MTY2OTI4NTUyOX0.sja56rIB6ldMXojnrpD7JVlVHoYCrLvnBU4AEWzbmjQ
+###
+
+GET http://localhost:3000/inventory/11
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXNoYW50aCIsImlhdCI6MTY2OTI4NTUyOX0.sja56rIB6ldMXojnrpD7JVlVHoYCrLvnBU4AEWzbmjQ
+###
+
+PUT http://localhost:3000/inventory/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXNoYW50aCIsImlhdCI6MTY2OTI4NTUyOX0.sja56rIB6ldMXojnrpD7JVlVHoYCrLvnBU4AEWzbmjQ
+Content-Type: application/json
+
+{
+   "name":"laptop",
+   "stock": 15,
+   "price": 50000
+}
+###
+
+DELETE http://localhost:3000/inventory/11
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXNoYW50aCIsImlhdCI6MTY2OTI4NTUyOX0.sja56rIB6ldMXojnrpD7JVlVHoYCrLvnBU4AEWzbmjQ
+###
+
